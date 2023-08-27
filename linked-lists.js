@@ -43,6 +43,18 @@ class linkedList {
         console.log(this.size)
     }
 
+    returnHead() {
+        console.log(this.head)
+    }
+
+    returnTail() {
+        let current = this.head
+        while(current.next) {
+            current = current.next
+        }
+        console.log(current)
+    }
+
     display() {
         let current = this.head
         while (current) {
@@ -66,3 +78,7 @@ myList.prependNode(111)
 myList.display()
 
 myList.showSize()
+
+myList.returnHead()
+
+myList.returnTail()
