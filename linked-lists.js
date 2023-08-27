@@ -35,7 +35,7 @@ class linkedList {
     prependNode(data) {
         const node = new newNode(data);
         node.next = this.head
-        this.head= node
+        this.head = node
         this.size += 1
     }
 
@@ -49,20 +49,20 @@ class linkedList {
 
     returnTail() {
         let current = this.head
-        while(current.next) {
+        while (current.next) {
             current = current.next
         }
         console.log(`The tail of the list is ${current.data}`)
     }
 
     at(index) {
-        if(index < 0 || index >= this.size) {
+        if (index < 0 || index >= this.size) {
             console.log(`ERROR! INDEX IS OUTSIDE OF THE LIST`)
         }
 
         let current = this.head
 
-        for(let i = 0; i < index; i++ ) {
+        for (let i = 0; i < index; i++) {
             current = current.next
         }
         console.log(current.data)
@@ -70,11 +70,35 @@ class linkedList {
 
     pop() {
         let current = this.head
-        while(current.next.next) {
+        while (current.next.next) {
             current = current.next
         }
 
         current.next = null
+    }
+
+    contains(value) {
+        let current = this.head;
+        while (current) {
+            if (current.data === value) {
+                return console.log(`true`);
+            }
+            current = current.next;
+        }
+        return console.log(`nope`);
+    }
+
+    find(value) {
+        let current = this.head;
+        let index = 0;
+        while (current) {
+            if (current.data === value) {
+                return console.log(index);
+            }
+            current = current.next;
+            index++;
+        }
+        return console.log('Value not found');
     }
 
     display() {
@@ -110,3 +134,7 @@ myList.at(5)
 myList.pop()
 myList.display()
 myList.appendNode(1232132)
+
+myList.contains(1232132)
+
+myList.find(10)
