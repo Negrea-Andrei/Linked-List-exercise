@@ -1,0 +1,20 @@
+{
+  "name": "linked-list-exercise",
+  "version": "1.0.0",
+  "description": "This project will focus on the Linked List data structure.",
+  "main": "linked-lists.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node linked-lists.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Negrea-Andrei/Linked-List-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Negrea-Andrei/Linked-List-exercise/issues"
+  },
+  "homepage": "https://github.com/Negrea-Andrei/Linked-List-exercise#readme"
+}
