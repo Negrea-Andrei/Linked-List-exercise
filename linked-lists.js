@@ -40,11 +40,11 @@ class linkedList {
     }
 
     showSize() {
-        console.log(this.size)
+        console.log(`The size of the list is ${this.size}`)
     }
 
     returnHead() {
-        console.log(this.head)
+        console.log(`The head of the list is ${this.head.data}`)
     }
 
     returnTail() {
@@ -52,7 +52,20 @@ class linkedList {
         while(current.next) {
             current = current.next
         }
-        console.log(current)
+        console.log(`The tail of the list is ${current.data}`)
+    }
+
+    at(index) {
+        if(index < 0 || index >= this.size) {
+            console.log(`ERROR! INDEX IS OUTSIDE OF THE LIST`)
+        }
+
+        let current = this.head
+
+        for(let i = 0; i < index; i++ ) {
+            current = current.next
+        }
+        console.log(current.data)
     }
 
     display() {
@@ -82,3 +95,5 @@ myList.showSize()
 myList.returnHead()
 
 myList.returnTail()
+
+myList.at(5)
