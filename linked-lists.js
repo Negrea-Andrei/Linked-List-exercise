@@ -102,11 +102,14 @@ class linkedList {
     }
 
     display() {
+        let results = ''
         let current = this.head
         while (current) {
-            console.log(current.data)
+            results += `(${current.data}) -> `
             current = current.next
         }
+        results += 'null';
+        console.log(results)
     }
 }
 
