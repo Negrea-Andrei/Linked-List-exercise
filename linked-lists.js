@@ -68,6 +68,15 @@ class linkedList {
         console.log(current.data)
     }
 
+    pop() {
+        let current = this.head
+        while(current.next.next) {
+            current = current.next
+        }
+
+        current.next = null
+    }
+
     display() {
         let current = this.head
         while (current) {
@@ -97,3 +106,7 @@ myList.returnHead()
 myList.returnTail()
 
 myList.at(5)
+
+myList.pop()
+myList.display()
+myList.appendNode(1232132)
